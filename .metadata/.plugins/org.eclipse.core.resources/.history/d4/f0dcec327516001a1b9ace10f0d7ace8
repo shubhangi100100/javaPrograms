@@ -1,0 +1,33 @@
+package com.iris.DaoImpl;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.iris.Dao.PersonDao;
+import com.iris.Models.Person;
+
+public class PersonDaoImpl implements PersonDao {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	
+	public List<Person> getAllPersons() {
+		Session session=sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from com.iris.Models.Person");
+		return query.list();
+	
+	}
+
+	public boolean deletePerson(Person personObj) {
+		Session session=sessionFactory.getCurrentSession();
+		session.delete(personObj);
+		return true;
+		
+	}
+
+}

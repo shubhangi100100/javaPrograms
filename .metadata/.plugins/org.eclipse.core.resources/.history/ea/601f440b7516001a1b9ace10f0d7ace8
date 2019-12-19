@@ -1,0 +1,31 @@
+package com.iris.ServiceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.iris.Dao.PersonDao;
+import com.iris.Models.Person;
+import com.iris.Service.PersonService;
+@Service("personService")
+@Transactional
+public class PersonServiceImpl implements PersonService{
+	
+	@Autowired
+	PersonDao personDaoObj;
+	
+	public List<Person> getAllPersons() {
+	
+		return personDaoObj.getAllPersons();
+	}
+
+	public boolean deletePerson(Person personObj) {
+	
+		return false;
+	}
+
+	
+}

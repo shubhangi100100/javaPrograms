@@ -1,0 +1,37 @@
+package com.iris.Controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.iris.Models.Person;
+import com.iris.Service.PersonService;
+
+@Controller
+public class PersonControllers {
+	@Autowired
+	PersonService personServiceObj;
+	
+	@ResponseBody
+	@RequestMapping(value="/getAllPersons",method=RequestMethod.GET)
+	@CrossOrigin("http://localhost:4200")
+	public List<Person> getAllPersons(){
+		return personServiceObj.getAllPersons();
+		
+		
+	}
+	@ResponseBody
+	@RequestMapping(value="/deletePerson",method=RequestMethod.GET)
+	@CrossOrigin("http://localhost:4200")
+	public boolean deletePerson(Person personObj) {
+		return personServiceObj.deletePerson(personObj);
+		
+	}
+	
+	
+}

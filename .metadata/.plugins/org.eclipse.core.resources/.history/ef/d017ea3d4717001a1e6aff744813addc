@@ -1,0 +1,12 @@
+package com.iris.Service;
+
+import java.util.List;
+
+import com.iris.Models.Person;
+
+public interface PersonService {
+
+	public List<Person> getAllPersons();
+	public boolean deletePerson(int personId);
+	
+}

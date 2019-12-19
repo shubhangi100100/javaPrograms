@@ -1,0 +1,30 @@
+package com.iris.Controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.iris.Models.Person;
+import com.iris.Service.PersonService;
+
+public class PersonControllers {
+	@Autowired
+	PersonService personServiceObj;
+	
+	@ResponseBody
+	@RequestMapping(value="/")
+	public List<Person> getAllPersons(){
+		return personServiceObj.getAllPersons();
+		
+		
+	}
+	
+	public boolean deletePerson(Person personObj) {
+		return personServiceObj.deletePerson(personObj);
+		
+	}
+	
+	
+}

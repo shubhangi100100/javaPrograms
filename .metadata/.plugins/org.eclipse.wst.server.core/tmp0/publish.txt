@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri Dec 06 12:29:55 IST 2019
+org.eclipse.jst.j2ee.server\:Persons=WEB-INF/lib/Persons-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\shubhangi.upreti\\.m2\\repository\\org\\springframework\\spring-web\\5.1.5.RELEASE\\spring-web-5.1.5.RELEASE.jar=WEB-INF/lib/spring-web-5.1.5.RELEASE.jar

@@ -1,0 +1,6 @@
+1575449198791	Rename type 'personDao'
+1575449298779	Rename package 'com.iris.PersonDao'
+1575449307717	Rename package 'com.iris.PersonDaoImpl'
+1575449319653	Rename package 'com.iris.Persons.Config'
+1575449333901	Rename package 'com.iris.PersonService'
+1575449343386	Rename package 'com.iris.PersonServiceImpl'

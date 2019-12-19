@@ -1,0 +1,20 @@
+package com.iris.DaoImpl;
+
+import java.util.List;
+
+import com.iris.Dao.PersonDao;
+import com.iris.Models.Person;
+
+public class PersonDaoImpl implements PersonDao {
+
+	public List<Person> getAllPersons() {
+		
+		return null;
+	}
+
+	public Person deletePerson() {
+		
+		return null;
+	}
+
+}

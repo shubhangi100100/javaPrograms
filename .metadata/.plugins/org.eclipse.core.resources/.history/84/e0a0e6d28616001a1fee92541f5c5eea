@@ -1,0 +1,15 @@
+package com.iris.Dao;
+
+import java.util.List;
+
+import com.iris.Models.Person;
+
+public interface PersonDao {
+
+	
+	public List<Person> getAllPersons();
+	public boolean deletePerson(Person personObj);
+	
+	
+	
+}

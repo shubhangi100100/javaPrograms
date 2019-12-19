@@ -1,0 +1,26 @@
+package com.iris.DaoImpl;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+
+import com.iris.Dao.PersonDao;
+import com.iris.Models.Person;
+
+public class PersonDaoImpl implements PersonDao {
+
+	public List<Person> getAllPersons() {
+		Session session=sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from com.iris.Models.Person");
+		return query.list();
+		
+		return null;
+	}
+
+	public Person deletePerson() {
+		
+		return null;
+	}
+
+}

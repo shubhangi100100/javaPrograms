@@ -1,0 +1,13 @@
+package com.iris.ServiceImpl;
+
+import java.util.List;
+
+import com.iris.Models.Person;
+
+public class PersonServiceImpl {
+
+
+	public List<Person> getAllPersons();
+	public boolean deletePerson(Person personObj);
+	
+}

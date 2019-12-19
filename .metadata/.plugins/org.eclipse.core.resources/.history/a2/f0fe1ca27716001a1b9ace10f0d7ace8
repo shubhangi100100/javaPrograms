@@ -1,0 +1,23 @@
+package com.iris.Controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.iris.Models.Person;
+import com.iris.Service.PersonService;
+
+@Controller
+public class PersonControllers {
+
+	@Autowired
+	PersonService personServiceObj;
+	
+	public List<Person> getAllPersons(){
+		return personServiceObj.getAllPersons();
+		
+		
+	}
+	
+}
